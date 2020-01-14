@@ -5,6 +5,10 @@ using namespace std;
 
 int main()
 {
-	cout << "hello world!" << endl;
+	cout << "How long would you like your password to be? Length: ";
+	int length;
+	cin >> length;
+	Password pass(length);
+	cout << "New password: " << pass << endl;
 	return 0;
 }

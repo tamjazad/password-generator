@@ -11,7 +11,7 @@ class Password {
 
 	public:
 		// constructor
-		Password();
+		explicit Password(int index = 10);
 
 		// destructor
 		~Password();
@@ -21,11 +21,12 @@ class Password {
 
 		// copy assignment
 		Password& operator=(const Password& rhs);
+
+		friend ostream& operator<<(ostream& os, const Password& pass);
 	
 	private:
 
 		string pass_str;
-		string possible_chars;
 
 };
 
